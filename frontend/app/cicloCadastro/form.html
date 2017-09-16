@@ -1,0 +1,32 @@
+<div role="form">
+	<div class="box-body">
+		<field id="razao_social" label="Razao Social" grid="12 6 4" placeholder="Informe a razao social" model="bcCtrl.cicloCadastro.razao_social" readonly="bcCtrl.tabDelete"></field>
+		
+		<field id="nome_fantasia" label="Nome Fantasia" grid="12 6 4" placeholder="Informe o nome fantasia" model="bcCtrl.cicloCadastro.nome_fantasia" readonly="bcCtrl.tabDelete"></field>
+
+		<field id="cnpj" label="CNPJ" grid="12 6 4" placeholder="Informe o cnpj" model="bcCtrl.cicloCadastro.cnpj" readonly="bcCtrl.tabDelete"></field>
+	
+	</div>
+
+	<div class="box-body">
+		<field id="nome_responsavel" label="Nome do Responsavel" grid="12 6 4" placeholder="Informe o nome do responsavel" model="bcCtrl.cicloCadastro.nome_responsavel" readonly="bcCtrl.tabDelete"></field>
+
+		<field id="cpf_responsavel" label="CPF do Responsavel" grid="12 6 4" placeholder="Informe o cpf do responsavel" model="bcCtrl.cicloCadastro.cpf_responsavel" readonly="bcCtrl.tabDelete"></field>
+
+		<field id="data_fundacao" label="Data de Fundacao" grid="12 6 4" placeholder="Informe a data de fundacao" model="bcCtrl.cicloCadastro.data_fundacao" readonly="bcCtrl.tabDelete"
+		type="date"></field>
+	</div>
+	
+	<div class="box-footer">
+		<button class="btn btn-primary" ng-click="bcCtrl.create()"
+			ng-if="bcCtrl.tabCreate">Incluir</button>
+
+		<button class="btn btn-info" ng-if="bcCtrl.tabUpdate"
+			ng-click="bcCtrl.update()">Alterar</button>
+
+		<button class="btn btn-danger" ng-if="bcCtrl.tabDelete"
+			ng-click="bcCtrl.delete()">Excluir</button>
+			
+		<button class="btn btn-default" ng-click="bcCtrl.refresh()">Cancelar</button>
+	</div>
+</div>

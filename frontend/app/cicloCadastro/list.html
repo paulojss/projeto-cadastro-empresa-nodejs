@@ -1,0 +1,25 @@
+<div class="box-body">
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Razao Social</th>
+				<th>Nome Fantasia</th>
+				<th>CNPJ</th>
+				<th>Responsavel</th>
+				<th>Acoes</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="cicloCadastro in bcCtrl.cicloCadastros">
+				<td>{{ cicloCadastro.razao_social }}</td>
+				<td>{{ cicloCadastro.nome_fantasia }}</td>
+				<td>{{ cicloCadastro.cnpj }}</td>
+				<td>{{ cicloCadastro.nome_responsavel }}</td>
+				<td class="table-actions">
+					<button class="btn btn-warning" ng-click="bcCtrl.showTabUpdate(cicloCadastro)"> <i class="fa fa-pencil"></i></button>
+					<button class="btn btn-danger" ng-click="bcCtrl.showTabDelete(cicloCadastro)"> <i class="fa fa-trash-o"></i></button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
